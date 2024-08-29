@@ -59,8 +59,8 @@ describe('Проверка авторизации', function () {
         cy.get('#mail').type('GerMan@Dolnikov.ru');                              // нашел поле для ввода логина, ввел логин GerMan@Dolnikov.ru
         cy.get('#pass').type('iLoveqastudio1');                                 // нашел поле для ввода пароля, ввел верный пароль
         cy.get('#loginButton').click();                                         // найти кнопку войти и нажать на нее
-        cy.get('#messageHeader').contains('Такого логина или пароля нет');      // проверка нужного текста
-        cy.get('#messageHeader').should('be.visible');                          // понять что 'Нужно исправить проблему валидации' виден пользователю
+        cy.get('#messageHeader').contains('Авторизация прошла успешно');        // проверка нужного текста
+        cy.get('#messageHeader').should('be.visible');                          // понять что 'Авторизация прошла успешно' виден пользователю
         cy.get('#exitMessageButton > .exitIcon').should('be.visible');          // найти крестик и понять что он виден пользователю
 
     })        
